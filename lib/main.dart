@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
   // function to fetch the meditation audio url from the API
   Future<void> _fetchMeditationAudio() async {
     // replace API_URL with the actual URL of your meditation audio API
-    final response =
-        await http.get(Uri.https('https://music.youtube.com', 'api/tracks'));
+    final response = await http.get(Uri.https('https://music.youtube.com',
+        '/watch?v=aVOPaodbabI&list=RDCLAK5uy_m7I7OhxMQp4dAK2AKvrEoiNmrIDnAX5Z8'));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       setState(() {
